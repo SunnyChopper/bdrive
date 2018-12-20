@@ -1,0 +1,92 @@
+/* -------------------------- *\
+	Buttons
+\* -------------------------- */
+
+.bottom-cta-button {
+	margin-top: 2em;
+	display: block;
+	margin-left: auto;
+	margin-right: 0px;
+	width: fit-content;
+}
+
+@media only screen and (max-width: 575px) {
+	.bottom-cta-button {
+		width: 100%;
+	}
+}
+
+/* -------------------------- *\
+	Custom Divs
+\* -------------------------- */
+
+.image-box-edge {
+	margin-top: 0px;
+	margin-bottom: 16px;
+	background-color: hsl(0, 0%, 97.5%);
+	-webkit-box-shadow: 0px 4px 6px -2px #424242; 
+	box-shadow: 0px 4px 6px -2px #424242;
+	transition: 0.25s all;
+	-webkit-transition: 0.25s all;
+}
+
+.image-box-edge:hover {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	-webkit-box-shadow: 0px 0px 15px -8px #424242; 
+	box-shadow: 0px 0px 15px -8px #424242;
+}
+
+.image-box-edge > .image-box-image {
+	height: 150px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.image-box-edge > .image-box-info {
+	background-color: hsl(0, 0%, 97.5%);
+	padding: 36px;
+	text-align: center;
+}
+
+.image-box-edge > .image-box-info > h5 {
+	font-size: 20px;
+}
+
+.gray-box {
+	background-color: hsl(0, 0%, 97.5%);
+	border-bottom: 4px solid hsl(0, 0%, 80%);
+	border-radius: 12px;
+	padding: 2em;
+}
+
+.page-header {
+	min-height: 300px;
+	display: flex;
+}
+
+.page-header > .container {
+	margin: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 575px) {
+	.page-header {
+		min-height: 200px;
+	}
+}
+
+/* -------------------------- *\
+	Custom Text
+\* -------------------------- */
+
+.heading {
+	margin-top: 2.5em;
+}
+
+@media only screen and (max-width: 575px) {
+	.heading {
+		margin-top: 0.5em;
+	}
+}

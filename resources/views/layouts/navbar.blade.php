@@ -24,7 +24,7 @@
 							<li><a href="/recommended">Extra Material</a></li>
 						</ul>
 					</li>
-					<li><a href="contact.html" class="animsition-link">Contact</a></li>
+					<li><a href="/contact" class="animsition-link">Contact</a></li>
 				</ul>
 			</nav>
 		</div>

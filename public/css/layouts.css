@@ -1,0 +1,391 @@
+/* ------------------------ *\
+	Margins
+\* ------------------------ */
+
+.m-0 {
+	margin: 0px;
+}
+
+.m-2 {
+	margin: 2px;
+}
+
+.m-4 {
+	margin: 4px;
+}
+
+.m-8 {
+	margin: 8px;
+}
+
+.m-16 {
+	margin: 16px;
+}
+
+.m-32 {
+	margin: 32px;
+}
+
+.m-64 {
+	margin: 64px;
+}
+
+.m-128 {
+	margin: 128px;
+}
+
+.mt-0 {
+	margin-top: 0px;
+}
+
+.mt-2 {
+	margin-top: 2px;
+}
+
+.mt-4 {
+	margin-top: 4px;
+}
+
+.mt-8 {
+	margin-top: 8px;
+}
+
+.mt-16 {
+	margin-top: 16px;
+}
+
+.mt-32 {
+	margin-top: 32px;
+}
+
+.mt-64 {
+	margin-top: 64px;
+}
+
+.mt-128 {
+	margin-top: 128px;
+}
+
+.mb-0 {
+	margin-bottom: 0px;
+}
+
+.mb-2 {
+	margin-bottom: 2px;
+}
+
+.mb-4 {
+	margin-bottom: 4px;
+}
+
+.mb-8 {
+	margin-bottom: 8px;
+}
+
+.mb-16 {
+	margin-bottom: 16px;
+}
+
+.mb-32 {
+	margin-bottom: 32px;
+}
+
+.mb-64 {
+	margin-bottom: 64px;
+}
+
+.mb-128 {
+	margin-bottom: 128px;
+}
+
+@media only screen and (max-width: 575px) {
+	.m-0-mobile {
+		margin: 0px;
+	}
+
+	.m-2-mobile {
+		margin: 2px;
+	}
+
+	.m-4-mobile {
+		margin: 4px;
+	}
+
+	.m-8-mobile {
+		margin: 8px;
+	}
+
+	.m-16-mobile {
+		margin: 16px;
+	}
+
+	.m-32-mobile {
+		margin: 32px;
+	}
+
+	.m-64-mobile {
+		margin: 64px;
+	}
+
+	.m-128-mobile {
+		margin: 128px;
+	}
+
+	.mt-0-mobile {
+		margin-top: 0px;
+	}
+
+	.mt-2-mobile {
+		margin-top: 2px;
+	}
+
+	.mt-4-mobile {
+		margin-top: 4px;
+	}
+
+	.mt-8-mobile {
+		margin-top: 8px;
+	}
+
+	.mt-16-mobile {
+		margin-top: 16px;
+	}
+
+	.mt-32-mobile {
+		margin-top: 32px;
+	}
+
+	.mt-64-mobile {
+		margin-top: 64px;
+	}
+
+	.mt-128-mobile {
+		margin-top: 128px;
+	}
+
+	.mb-0-mobile {
+		margin-bottom: 0px;
+	}
+
+	.mb-2-mobile {
+		margin-bottom: 2px;
+	}
+
+	.mb-4-mobile {
+		margin-bottom: 4px;
+	}
+
+	.mb-8-mobile {
+		margin-bottom: 8px;
+	}
+
+	.mb-16-mobile {
+		margin-bottom: 16px;
+	}
+
+	.mb-32-mobile {
+		margin-bottom: 32px;
+	}
+
+	.mb-64-mobile {
+		margin-bottom: 64px;
+	}
+
+	.mb-128-mobile {
+		margin-bottom: 128px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.m-0-desktop {
+		margin: 0px;
+	}
+
+	.m-2-desktop {
+		margin: 2px;
+	}
+
+	.m-4-desktop {
+		margin: 4px;
+	}
+
+	.m-8-desktop {
+		margin: 8px;
+	}
+
+	.m-16-desktop {
+		margin: 16px;
+	}
+
+	.m-32-desktop {
+		margin: 32px;
+	}
+
+	.m-64-desktop {
+		margin: 64px;
+	}
+
+	.m-128-desktop {
+		margin: 128px;
+	}
+
+	.mt-0-desktop {
+		margin-top: 0px;
+	}
+
+	.mt-2-desktop {
+		margin-top: 2px;
+	}
+
+	.mt-4-desktop {
+		margin-top: 4px;
+	}
+
+	.mt-8-desktop {
+		margin-top: 8px;
+	}
+
+	.mt-16-desktop {
+		margin-top: 16px;
+	}
+
+	.mt-32-desktop {
+		margin-top: 32px;
+	}
+
+	.mt-64-desktop {
+		margin-top: 64px;
+	}
+
+	.mt-128-desktop {
+		margin-top: 128px;
+	}
+
+	.mb-0-desktop {
+		margin-bottom: 0px;
+	}
+
+	.mb-2-desktop {
+		margin-bottom: 2px;
+	}
+
+	.mb-4-desktop {
+		margin-bottom: 4px;
+	}
+
+	.mb-8-desktop {
+		margin-bottom: 8px;
+	}
+
+	.mb-16-desktop {
+		margin-bottom: 16px;
+	}
+
+	.mb-32-desktop {
+		margin-bottom: 32px;
+	}
+
+	.mb-64-desktop {
+		margin-bottom: 64px;
+	}
+
+	.mb-128-desktop {
+		margin-bottom: 128px;
+	}
+}
+
+/* ------------------------ *\
+	Colors
+\* ------------------------ */
+
+.red {
+	color: red;
+}
+
+.black {
+	color: red;
+}
+
+.white {
+	color: white;
+}
+
+.blue {
+	color: blue;
+}
+
+.green {
+	color: green;
+}
+
+/* ------------------------ *\
+	Positioning
+\* ------------------------ */
+
+.center-button {
+	display: block;
+	width: fit-content;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.left-button {
+	display: block;
+	width: fit-content;
+	margin-right: auto;
+	margin-left: 0px;
+}
+
+.right-button {
+	display: block;
+	width: fit-content;
+	margin-right: 0px;
+	margin-left: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+@media only screen and (max-width: 575px) {
+	.mobile-center-button {
+		display: block;
+		width: fit-content;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.mobile-left-button {
+		display: block;
+		width: fit-content;
+		margin-right: auto;
+		margin-left: 0px;
+	}
+
+	.mobile-right-button {
+		display: block;
+		width: fit-content;
+		margin-right: 0px;
+		margin-left: auto;
+	}	
+
+	.mobile-text-center {
+		text-align: center;
+	}
+
+	.mobile-text-left {
+		text-align: left;
+	}
+
+	.mobile-text-right {
+		text-align: right;
+	}
+}

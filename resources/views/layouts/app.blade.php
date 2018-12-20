@@ -10,6 +10,8 @@
 		@endif
 
 		<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('css/layouts.css') }}">
 	</head>
 	<body>
 		<div class="js-animsition animsition" id="site-wrap" data-animsition-in-class="fade-in" data-animsition-out-class="fade-out">
