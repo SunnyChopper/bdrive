@@ -1,4 +1,4 @@
-<div class="page-header" style="background-image: url(images/slider-1.jpg);">
+<div class="page-header" style="background-image: url({{ URL::asset('images/slider-1.jpg') }});">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-12">

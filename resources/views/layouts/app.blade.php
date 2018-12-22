@@ -9,6 +9,8 @@
 			<title>{{ env('APP_NAME') }}</title>
 		@endif
 
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+
 		<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
 		<link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
 		<link rel="stylesheet" href="{{ URL::asset('css/layouts.css') }}">
