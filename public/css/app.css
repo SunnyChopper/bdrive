@@ -77,8 +77,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	
 }
 
-
-
 .color-box {
 	margin-top: 8px;
 	margin-bottom: 8px;
@@ -243,4 +241,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	.heading {
 		margin-top: 0.5em;
 	}
+}
+
+/* -------------------------- *\
+	Custom Images
+\* -------------------------- */
+
+.regular-image {
+	width: 100%;
+	height: auto;
 }
