@@ -18,9 +18,9 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            return redirect('/members/dashboard');
         }
 
-        return $next($request);
+        return $next($request)->with('page_header', 'Join the Community');
     }
 }
