@@ -108,11 +108,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="100">
-					<p><a href="#" class="btn btn-black py-3 px-4">More Features</a></p>
-				</div>
-			</div>
 		</div>
 	</div>
 

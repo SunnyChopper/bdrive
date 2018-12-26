@@ -46,4 +46,20 @@ class PagesController extends Controller
 
         return view('pages.view-post')->with('page_title', $page_title)->with('page_header', $page_header)->with('post', $post);
     }
+
+    public function courses() {
+        // Dynamic page features
+        $page_header = "Courses";
+        $page_title = $page_header;
+
+        return view('pages.courses')->with('page_header', $page_header)->with('page_title', $page_title);
+    }
+
+    public function free_course() {
+        // Dynamic page features
+        $page_header = "Free Intro Course";
+        $page_title = $page_header;
+
+        return view('pages.free-course')->with('page_header', $page_header)->with('page_title', $page_title);
+    }
 }

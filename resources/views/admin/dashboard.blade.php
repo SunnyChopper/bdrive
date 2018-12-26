@@ -8,6 +8,7 @@
 			<div class="col-lg-6 col-md-6 col-sm-12 col-12">
 				<div class="gray-box">
 					<h4 class="text-center">Performance Summary</h4>
+					<p class="text-center"><b>Note:</b> Under construction. Not valid numbers.</p>
 					<hr />
 
 					<div class="row mt-32">
@@ -76,7 +77,7 @@
 
 				<div class="row mt-32">
 					<div class="col-lg-6 col-md-6 col-sm-6 col-6">
-						<a href="">
+						<a href="/admin/posts/new">
 							<div class="color-box color-box-blue">
 								<div class="color-box-content">
 									<div class="content-wrapper">
@@ -91,43 +92,13 @@
 					</div>
 
 					<div class="col-lg-6 col-md-6 col-sm-6 col-6">
-						<a href="">
+						<a href="/admin/lead-magnets/new">
 							<div class="color-box color-box-blue">
 								<div class="color-box-content">
 									<div class="content-wrapper">
 										<div class="content">
-											<span class="icon icon-question"></span>
-											<h5 class="text-center">Answer Questions</h5>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-6 col-md-6 col-sm-6 col-6">
-						<a href="">
-							<div class="color-box color-box-blue">
-								<div class="color-box-content">
-									<div class="content-wrapper">
-										<div class="content">
-											<span class="icon icon-desktop"></span>
-											<h5 class="text-center">Manage Software Tools</h5>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-6 col-md-6 col-sm-6 col-6">
-						<a href="">
-							<div class="color-box color-box-blue">
-								<div class="color-box-content">
-									<div class="content-wrapper">
-										<div class="content">
-											<span class="icon icon-user"></span>
-											<h5 class="text-center">Add Authorized User</h5>
+											<span class="icon icon-magnet"></span>
+											<h5 class="text-center">New Lead Magnet</h5>
 										</div>
 									</div>
 								</div>

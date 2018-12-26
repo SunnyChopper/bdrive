@@ -1,4 +1,33 @@
 /* -------------------------- *\
+	Theme Overrides
+\* -------------------------- */
+
+.templateux-block-play {
+	margin: auto;
+    margin-top: calc(56.25% / 2);
+    background-color: #ff0000;
+    margin-bottom: calc(56.25% / 2);
+}
+
+.templateux-block-play:hover {
+	background-color: hsl(0, 100%, 40%);
+}
+
+.templateux-block-play span {
+	color: white;
+}
+
+/* -------------------------- *\
+	Element Styling
+\* -------------------------- */
+
+
+.light-shadow {
+	-webkit-box-shadow: 0px 1px 8px -2px rgba(0,0,0,0.5); 
+	box-shadow: 0px 1px 8px -2px rgba(0,0,0,0.5);
+}
+
+/* -------------------------- *\
 	Buttons
 \* -------------------------- */
 
@@ -22,11 +51,11 @@
 
 .gray-row {
 	background: rgb(255,255,255); /* Old browsers */
-background: rgb(255,255,255); /* Old browsers */
-background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 );
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 );
 	padding: 64px;
 }
 
@@ -48,6 +77,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	margin-top: 8px;
 	margin-bottom: 8px;
 	border-radius: 8px;
+}
+
+.video-box {
+	width: auto;
+	background-size: cover;
+	display: flex;
+	background-position: center;
+	-webkit-box-shadow: 0px 1px 8px -2px rgba(0,0,0,0.5); 
+	box-shadow: 0px 1px 8px -2px rgba(0,0,0,0.5);
 }
 
 .card-overlay {
@@ -212,6 +250,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 .heading {
+	margin-top: 0em;
+}
+
+.banner-heading {
 	margin-top: 2.5em;
 }
 
@@ -239,6 +281,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 
 	.heading {
+		margin-top: 0.5em;
+	}
+
+	.banner-heading {
 		margin-top: 0.5em;
 	}
 }

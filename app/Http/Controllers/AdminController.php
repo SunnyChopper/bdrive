@@ -49,7 +49,7 @@ class AdminController extends Controller
                 if ($user->backend_auth == 0) {
                     return redirect()->back()->with('admin_login_error', 'You are not authorized to access this area.');
                 } else {
-                    $this->login_user();
+                    $this->login_admin();
                     return redirect(url('/admin/dashboard'));
                 }
             } else {

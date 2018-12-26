@@ -14,6 +14,8 @@
 // Public site
 Route::get('/', 'PagesController@index');
 Route::get('/contact', 'PagesController@contact');
+Route::get('/courses', 'PagesController@courses');
+Route::get('/free-course', 'PagesController@free_course');
 Route::get('/blog', 'PagesController@blog');
 Route::get('/post/{post_id}/{slug}', 'PagesController@view_post');
 
@@ -27,6 +29,19 @@ Route::get('/admin/dashboard', 'AdminController@dashboard');
 Route::get('/admin/posts/view', 'AdminController@view_blog_posts');
 Route::get('/admin/posts/new', 'AdminController@new_blog_post');
 Route::get('/admin/posts/edit/{post_id}', 'AdminController@edit_blog_post');
+
+// Lead magnet functions
+Route::get('/admin/lead-magnets/view', 'LeadMagnetsController@view_lead_magnets');
+Route::get('/admin/lead-magnets/new', 'LeadMagnetsController@new_lead_magnet');
+Route::get('/admin/lead-magnets/edit/{lead_magnet_id}', 'LeadMagnetsController@edit_lead_magnet');
+Route::get('/lp/{slug}', 'LeadMagnetsController@read');
+Route::post('/admin/lead-magnets/create', 'LeadMagnetsController@create');
+Route::post('/admin/lead-magnets/update', 'LeadMagnetsController@update');
+Route::post('/admin/lead-magnets/delete', 'LeadMagnetsController@delete');
+
+// Lead functions
+Route::get('/admin/lead-magnets/{lead_magnet_id}/details', 'LeadsController@view_leads_for_lead_magnet');
+Route::post('/lp/submit', 'LeadsController@create');
 
 // Blog post functions
 Route::post('/admin/posts/create', 'BlogPostsController@create');
