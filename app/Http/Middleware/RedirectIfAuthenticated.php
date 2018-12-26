@@ -21,6 +21,6 @@ class RedirectIfAuthenticated
             return redirect('/members/dashboard');
         }
 
-        return $next($request)->with('page_header', 'Join the Community');
+        return $next($request);
     }
 }
