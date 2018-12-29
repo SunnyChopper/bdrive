@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Custom\BlogPostHelper;
 
-use App\User;
-
 use Mail;
 
 class PagesController extends Controller
