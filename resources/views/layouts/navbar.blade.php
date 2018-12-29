@@ -26,7 +26,7 @@
 								<li><a href="/recommended">Extra Material</a></li>
 							</ul>
 						</li> --}}
-						{{-- <li><a href="/contact" class="animsition-link">Contact</a></li> --}}
+						<li><a href="/contact" class="animsition-link">Contact</a></li>
 					@elseif(session()->has('backend_auth'))
 						<li><a href="/admin/dashboard" class="animsition-link">Dashboard</a></li>
 						<li><a href="/admin/posts/view" class="animsition-link">Blog Posts</a>

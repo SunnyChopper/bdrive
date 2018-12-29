@@ -23,12 +23,12 @@
 					</div>
 					<div class="col-md-3">
 						<div class="block-footer-widget">
-							{{-- <h3>Support</h3>
+							<h3>Support</h3>
 							<ul class="list-unstyled">
-								<li><a href="#">FAQ</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Report Technical Bug</a></li>
-							</ul> --}}
+								{{-- <li><a href="#">FAQ</a></li> --}}
+								<li><a href="/contact">Contact Us</a></li>
+								{{-- <li><a href="#">Report Technical Bug</a></li> --}}
+							</ul>
 						</div>
 					</div>
 					<div class="col-md-3">
@@ -47,8 +47,8 @@
 							<a href="/free-course" class="btn btn-primary mb-3">Take Our Free Intro Course</a>
 							<p>Connect With Us</p>
 							<ul class="list-unstyled block-social">
-								{{-- <li><a href="#" class="p-1"><span class="icon-facebook"></span></a></li>
-								<li><a href="#" class="p-1"><span class="icon-twitter"></span></a></li> --}}
+								{{-- <li><a href="#" class="p-1"><span class="icon-facebook"></span></a></li> --}}
+								<li><a href="https://www.twitter.com/TheBillionDrive" class="p-1"><span class="icon-twitter"></span></a></li>
 								<li><a href="https://www.instagram.com/billionairesdrive" class="p-1"><span class="icon-instagram"></span></a></li>
 							</ul>
 						</div>

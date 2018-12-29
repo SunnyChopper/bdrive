@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Custom\BlogPostHelper;
 
+use Mail;
+
 class PagesController extends Controller
 {
     public function index() {
@@ -21,6 +23,21 @@ class PagesController extends Controller
     	$page_header = $page_title;
 
     	return view('pages.contact')->with('page_title', $page_title)->with('page_header', $page_header);
+    }
+
+    public function submit_contact(Request $data) {
+        $to_name = "Billionaires Drive";
+        $to_email = env('MAIL_USERNAME');
+
+        $data = array('name' => $data->name, 'email' => $data->email, 'category' => $data->category, 'body' => $data->message);
+
+        Mail::send('emails.contact-email', $data, function($message) use ($to_name, $to_email){
+            $message->to($to_email, $to_name);
+            $message->from(env('MAIL_USERNAME'), "BillionairesDrive");
+            $message->subject('🚨 New Contact Form Submission 🚨');
+        });
+
+        return redirect()->back()->with('success', 'Successfully submitted.');
     }
 
     public function blog() {
