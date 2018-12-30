@@ -50,3 +50,12 @@ Route::post('/admin/posts/update', 'BlogPostsController@update');
 Route::post('/admin/posts/delete', 'BlogPostsController@delete');
 
 Auth::routes();
+
+// Premium Content functions
+Route::get('/members/premium/{content_id}', 'PremiumContentController@read');
+Route::get('/admin/premium/view', 'PremiumContentController@view_premium_content');
+Route::get('/admin/premium/edit/{post_id}', 'PremiumContentController@edit_premium_content');
+Route::get('/admin/premium/new', 'PremiumContentController@new_premium_content');
+Route::post('/admin/premium/create', 'PremiumContentController@create');
+Route::post('/admin/premium/update', 'PremiumContentController@update');
+Route::post('/admin/premium/delete', 'PremiumContentController@delete');

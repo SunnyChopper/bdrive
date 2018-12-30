@@ -35,6 +35,11 @@
 								<li><a href="/admin/posts/stats">View Post Stats</a></li>
 							</ul>
 						</li>
+						<li><a href="/admin/premium/view" class="animsition-link">Premium Content</a>
+							<ul>
+								<li><a href="/admin/premium/new">New Premium Content</a></li>
+							</ul>
+						</li>
 						<li><a href="/admin/lead-magnets/view" class="animsition-link">Lead Magnets</a>
 							<ul>
 								<li><a href="/admin/lead-magnets/new">New Lead Magnet</a></li>
