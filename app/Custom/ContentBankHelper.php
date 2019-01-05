@@ -35,9 +35,7 @@ class ContentBankHelper {
 
 	public function update($data) {
 		$content_bank = ContentBank::find($data["post_id"]);
-		$content_bank->post_user_id = $data["author_id"];
 		$content_bank->description = $data["description"];
-		$content_bank->image_url = $data["image_url"];
 		$content_bank->category = $data["category"];
 		$content_bank->save();
 	}

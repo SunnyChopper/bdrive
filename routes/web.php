@@ -59,3 +59,13 @@ Route::get('/admin/premium/new', 'PremiumContentController@new_premium_content')
 Route::post('/admin/premium/create', 'PremiumContentController@create');
 Route::post('/admin/premium/update', 'PremiumContentController@update');
 Route::post('/admin/premium/delete', 'PremiumContentController@delete');
+
+// Project board functions
+Route::get('/members/content-bank/my', 'ContentBankController@view_my');
+Route::get('/members/content-bank/view', 'ContentBankController@view_all');
+Route::get('/members/content-bank/view/{post_id}', 'ContentBankController@view_post');
+Route::get('/members/content-bank/new', 'ContentBankController@new');
+Route::post('/members/content-bank/create', 'ContentBankController@create');
+Route::get('/members/content-bank/edit/{post_id}', 'ContentBankController@edit');
+Route::post('/members/content-bank/update', 'ContentBankController@update');
+Route::post('/members/content-bank/delete', 'ContentBankController@delete');
