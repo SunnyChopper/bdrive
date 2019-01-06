@@ -30,6 +30,41 @@
 	Buttons
 \* -------------------------- */
 
+.upload_file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.upload_file + label {
+	margin-top: 1em;
+	font-size: 1em;
+    font-weight: 400;
+    color: white;
+    padding: 4px 24px;
+    background-color: #f64747;
+   	text-transform: uppercase;
+   	letter-spacing: 0.1em;
+   	-webkit-box-shadow: 0px 2px 12px -2px rgba(0,0,0,0.5); 
+	box-shadow: 0px 2px 12px -2px rgba(0,0,0,0.5);
+	transition: 0.2s all;
+	-webkit-transition: 0.2s all;
+}
+
+.upload_file + label:hover {
+	cursor: pointer;
+	background-color: #c43838;
+}
+
+.upload_file + label:active {
+	transform: translateY(3px);
+	-webkit-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.5); 
+	box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.5);
+}
+
 .bottom-cta-button {
 	margin-top: 2em;
 	display: block;
@@ -68,6 +103,38 @@
 	Custom Divs
 \* -------------------------- */
 
+.content-bank-background-card {
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+	background-size: cover;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	border-radius: 8px;
+}
+
+.content-bank-card-overlay {
+	position: absolute;
+	border-radius: 8px;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.35) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.35) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000',GradientType=0);
+}
+
+.content-bank-card-overlay > .card-footer {
+	bottom: 0px;
+    position: absolute;
+    color: white;
+    padding: 16px;
+    background-color: transparent;
+    border-top: 0px;
+}
+
 .background-card {
 	width: 100%;
 	padding-top: 56.25%;
@@ -104,7 +171,7 @@
 	bottom: 0px;
     position: absolute;
     color: white;
-    padding: 24px;
+    padding: 16px;
     background-color: transparent;
     border-top: 0px;
 }
@@ -233,6 +300,15 @@
 
 	.page-header {
 		min-height: 200px;
+	}
+
+	.content-bank-card-overlay > .card-footer {
+		bottom: 0px;
+	    position: absolute;
+	    color: white;
+	    padding: 8px;
+	    background-color: transparent;
+	    border-top: 0px;
 	}
 }
 

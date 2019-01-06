@@ -63,6 +63,13 @@ class ContentBankController extends Controller
 			$content_bank_helper = new ContentBankHelper($post_id);
 			$post = $content_bank_helper->read();
 
+			// Dynamic page elements
+				$page_header = "Edit Content";
+				$page_title = $page_header;
+
+				// Return view
+				return view('members.content-bank.edit')->with('page_header', $page_header)->with('page_title', $page_title)->with('post', $post);
+
 			if (Auth::id() != $post->author_id) {
 				return redirect(url('/members/content-bank/view/' . $post_id));
 			} else {
@@ -71,7 +78,7 @@ class ContentBankController extends Controller
 				$page_title = $page_header;
 
 				// Return view
-				return view('members.content-bank.new')->with('page_header', $page_header)->with('page_title', $page_title)->with('post', $post);
+				return view('members.content-bank.edit')->with('page_header', $page_header)->with('page_title', $page_title)->with('post', $post);
 			}
 		}
     }

@@ -46,6 +46,13 @@
 							</ul>
 						</li>
 					@else
+						<li><a href="/members/dashboard" class="animsition-link">Dashboard</a></li>
+						<li><a href="/members/content-bank/view" class="animsition-link">Content Bank</a>
+							<ul>
+								<li><a href="/members/content-bank/new">Upload Content</a></li>
+								<li><a href="/members/content-bank/my">My Content</a></li>
+							</ul>
+						</li>
 					@endif
 				</ul>
 			</nav>
