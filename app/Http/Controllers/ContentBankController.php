@@ -32,7 +32,7 @@ class ContentBankController extends Controller
     		return redirect(url('/login'));
     	} else {
     		// Upload file
-    		$image = $data->file('image');
+    		$image = $data->file('upload_image');
     		$file_path = "content-bank/" . Auth::id() . "/" . Carbon::now()->toDateTimeString() . "." . $image->getClientOriginalExtension();
     		$upload_helper = new UploadHelper();
     		$image_url = $upload_helper->upload_to_s3($image, $file_path);
@@ -100,7 +100,7 @@ class ContentBankController extends Controller
     		$content_bank_helper->update($content_data);
 
     		// Go to post
-    		return redirect(url('/members/content-bank/view/' . $post_id));
+    		return redirect(url('/members/content-bank/view/' . $data->post_id));
     	}
     }
 
@@ -113,8 +113,8 @@ class ContentBankController extends Controller
 			$content_bank_helper = new ContentBankHelper($data->post_id);
 			$post = $content_bank_helper->read();
 
-			if (Auth::id() != $post->author_id) {
-				return redirect(url('/members/content-bank/view/' . $post_id));
+			if (Auth::id() != $post->post_user_id) {
+				return redirect(url('/members/content-bank/view/' . $data->post_id));
 			} else {
 				// Delete
 				$content_bank_helper->delete();
@@ -162,5 +162,16 @@ class ContentBankController extends Controller
 
 		// Return view
 		return view('members.content-bank.view-my')->with('page_title', $page_title)->with('page_header', $page_header)->with('posts', $posts);
+	}
+
+	public function download($content_id) {
+		// Get content
+		$content_bank_helper = new ContentBankHelper($content_id);
+		$content = $content_bank_helper->read();
+
+        $content->downloads = $content->downloads + 1;
+        $content->save();
+
+        return redirect($content->image_url);
 	}
 }

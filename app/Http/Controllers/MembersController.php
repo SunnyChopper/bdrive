@@ -5,10 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Custom\UploadHelper;
+use App\Custom\ContentBankHelper;
+use App\Custom\BlogPostHelper;
 
 use Auth;
 
 use App\User;
+
 
 class MembersController extends Controller
 {
@@ -20,7 +23,11 @@ class MembersController extends Controller
     	// Get user
     	$user = Auth::user();
 
-    	return view('members.dashboard')->with('page_header', $page_header)->with('page_title', $page_title)->with('user', $user);
+        // Get posts
+        $post_helper = new BlogPostHelper();
+        $posts = $post_helper->get_all_with_pagination(4);
+
+    	return view('members.dashboard')->with('page_header', $page_header)->with('page_title', $page_title)->with('user', $user)->with('posts', $posts);
     }
 
     public function profile($user_id) {
@@ -31,27 +38,32 @@ class MembersController extends Controller
     	$page_header = $user->first_name;
     	$page_title = $page_header;
 
-    	return view('members.view-profile')->with('page_header', $page_header)->with('page_title', $page_title)->with('user', $user);
+        // Get content
+        $content_bank_helper = new ContentBankHelper();
+        $content = $content_bank_helper->get_all_from_user($user->id);
+
+    	return view('members.view-profile')->with('page_header', $page_header)->with('page_title', $page_title)->with('user', $user)->with('content', $content);
     }
 
     public function edit_profile($user_id) {
-    	// Check if same user
-    	if (Auth::guest()) {
-    		return redirect(url('/login'));
-    	} else {
-    		if (Auth::user()->id == $user_id) {
-    			// Get user
-		    	$user = User::find($user_id);
+        // Check to see if correct user
+        if (Auth::guest()) {
+            return redirect(url('/login'));
+        } else {
+            if (Auth::user()->id != $user_id) {
+                return redirect(url('/members/profile/' . $user_id));
+            } else {
+                // Dynamic page elements
+                $page_header = "Edit Profile";
+                $page_title = $page_header;
 
-		    	// Dynamic page elements
-		    	$page_header = $user->first_name;
-		    	$page_title = $page_header;
+                // Get user object
+                $user = User::find($user_id);
 
-		    	return view('members.view-profile')->with('page_header', $page_header)->with('page_title', $page_title)->with('user', $user);
-    		} else {
-    			return redirect(url('/members/profile/' . $user_id));
-    		}
-    	}
+                // Return view
+                return view('members.edit-profile')->with('page_title', $page_title)->with('page_header', $page_header)->with('user', $user);
+            }
+        }
     }
 
     public function update_profile(Request $data) {
@@ -98,5 +110,10 @@ class MembersController extends Controller
     			return redirect(url('/members/profile/' . $user_id));
     		}
     	}
+    }
+
+    public function logout() {
+        Auth::logout();
+        return redirect(url('/'));
     }
 }

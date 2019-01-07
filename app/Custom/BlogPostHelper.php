@@ -54,14 +54,14 @@ class BlogPostHelper {
 	}
 
 	public function get_all() {
-		return BlogPost::where('is_active', 1)->get();
+		return BlogPost::where('is_active', 1)->orderBy('created_at', 'DESC')->get();
 	}
 
 	public function get_all_with_pagination($pagination) {
-		return BlogPost::where('is_active', 1)->paginate($pagination);
+		return BlogPost::where('is_active', 1)->orderBy('created_at', 'DESC')->paginate($pagination);
 	}
 
 	public function get_all_from_author($author_id) {
-		return BlogPost::where('author_id', $author_id)->where('is_active', 1)->get();
+		return BlogPost::where('author_id', $author_id)->where('is_active', 1)->orderBy('created_at', 'DESC')->get();
 	}
 }

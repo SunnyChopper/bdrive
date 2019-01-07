@@ -10,7 +10,7 @@ class UploadHelper {
 	/* Public functions */
 	public function upload_to_s3($file, $file_path) {
 		$s3 = \Storage::disk('s3');
-		$s3->put($file_path, file_get_contents($file), 'pu3blic');
+		$s3->put($file_path, file_get_contents($file), 'public');
 		return \Storage::disk('s3')->url($file_path);
 	}
 

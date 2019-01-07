@@ -108,6 +108,8 @@
 					</div>
 				</div>
 			</div>
+
+			<a href="/login" class="btn btn-primary center-button">Join the Community</a>
 		</div>
 	</div>
 

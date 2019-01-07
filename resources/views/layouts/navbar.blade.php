@@ -27,6 +27,12 @@
 							</ul>
 						</li> --}}
 						<li><a href="/contact" class="animsition-link">Contact</a></li>
+						<li><a href="/login" class="animsition-link">Members</a>
+							<ul>
+								<li><a href="/login">Login</a></li>
+								<li><a href="/register">Register</a></li>
+							</ul>
+						</li>
 					@elseif(session()->has('backend_auth'))
 						<li><a href="/admin/dashboard" class="animsition-link">Dashboard</a></li>
 						<li><a href="/admin/posts/view" class="animsition-link">Blog Posts</a>
@@ -51,6 +57,11 @@
 							<ul>
 								<li><a href="/members/content-bank/new">Upload Content</a></li>
 								<li><a href="/members/content-bank/my">My Content</a></li>
+							</ul>
+						</li>
+						<li><a href="/members/profile/{{ Auth::id() }}" class="animsition-link">{{ Auth::user()->first_name }}</a>
+							<ul>
+								<li><a href="/members/logout">Logout</a></li>
 							</ul>
 						</li>
 					@endif

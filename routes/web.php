@@ -21,7 +21,11 @@ Route::get('/blog', 'PagesController@blog');
 Route::get('/post/{post_id}/{slug}', 'PagesController@view_post');
 
 // Members site
+Route::get('/members/profile/{user_id}', 'MembersController@profile');
+Route::get('/members/profile/edit/{user_id}', 'MembersController@edit_profile');
+Route::post('/members/profile/update', 'MembersController@update_profile');
 Route::get('/members/dashboard', 'MembersController@dashboard');
+Route::get('/members/logout', 'MembersController@logout');
 
 // Admin site
 Route::get('/admin', 'AdminController@index');
@@ -60,7 +64,7 @@ Route::post('/admin/premium/create', 'PremiumContentController@create');
 Route::post('/admin/premium/update', 'PremiumContentController@update');
 Route::post('/admin/premium/delete', 'PremiumContentController@delete');
 
-// Project board functions
+// Content bank functions
 Route::get('/members/content-bank/my', 'ContentBankController@view_my');
 Route::get('/members/content-bank/view', 'ContentBankController@view_all');
 Route::get('/members/content-bank/view/{post_id}', 'ContentBankController@view_post');
@@ -69,3 +73,4 @@ Route::post('/members/content-bank/create', 'ContentBankController@create');
 Route::get('/members/content-bank/edit/{post_id}', 'ContentBankController@edit');
 Route::post('/members/content-bank/update', 'ContentBankController@update');
 Route::post('/members/content-bank/delete', 'ContentBankController@delete');
+Route::get('/members/content-bank/download/{post_id}', 'ContentBankController@download');

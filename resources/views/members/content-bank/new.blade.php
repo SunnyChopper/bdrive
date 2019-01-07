@@ -4,7 +4,8 @@
 	@include('layouts.banner')
 
 	<div class="container mt-64 mb-64 mt-32-mobile mt-32-desktop">
-		<form>
+		<form action="/members/content-bank/create" method="post" id="create_content_form" enctype="multipart/form-data">
+			{{ csrf_field() }}
 			<div class="row">
 				<div class="col-lg-4 col-md-6 col-sm-12 col-12">
 					<img src="https://dairydoo.com/wp-content/uploads/2018/03/Placeholder.png" class="regular-image" id="upload_image">
@@ -14,16 +15,33 @@
 
 				<div class="col-lg-8 col-md-6 col-sm-12 col-12 mt-32-mobile">
 					<div class="form-group">
-						<h6>Description:</h6>
-						<textarea class="form-control" rows="6" name="description" required></textarea>
+						<h6>Caption:</h6>
+						<textarea class="form-control" rows="6" name="description" form="create_content_form" required></textarea>
 					</div>
 
 					<div class="row">
 						<div class="col-lg-4 col-md-6 col-sm-8 col-12 form-group">
 							<h6>Category:</h6>
-							<select class="form-control">
-								<option value="Automotive">Automotive</option>
+							<select name="category" form="create_content_form" class="form-control">
+								<option value="Beauty">Beauty</option>
+								<option value="Business">Business</option>
+								<option value="Cars">Cars</option>
 								<option value="Education">Education</option>
+								<option value="Engineering">Engineering</option>
+								<option value="Fashion">Fashion</option>
+								<option value="Fitness">Fitness</option>
+								<option value="Food">Food</option>
+								<option value="Funny">Funny</option>
+								<option value="Health">Health</option>
+								<option value="Homes">Homes</option>
+								<option value="Makeup">Makeup</option>
+								<option value="Motivation">Motivation</option>
+								<option value="Music">Music</option>
+								<option value="Quotes">Quotes</option>
+								<option value="Trading">Trading</option>
+								<option value="Travel">Travel</option>
+								<option value="Trucks">Trucks</option>
+								<option value="Wealth">Wealth</option>
 							</select>
 						</div>
 					</div>
