@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Custom\LeadMagnetHelper;
 
 use Session;
+use Newsletter;
 
 class LeadsController extends Controller
 {
@@ -19,6 +20,14 @@ class LeadsController extends Controller
     	);
     	$lead_magnet_helper = new LeadMagnetHelper();
     	$lead_magnet_helper->create_lead($lead_data);
+
+        // Split first and last name for MailChimp
+        $name_array = $this->split_name($data->name);
+        $first_name = $name_array[0];
+        $last_name = $name_array[1];
+
+        // Subscribe to MailChimp
+        Newsletter::subscribe($data->email, ['FNAME' => $first_name, 'LNAME' => $last_name]);
 
     	return redirect()->back()->with('success', 'Successfully submitted.');
     }
@@ -47,5 +56,12 @@ class LeadsController extends Controller
         } else {
             return redirect(url('/admin'));
         }
+    }
+
+    private function split_name($name) {
+        $name = trim($name);
+        $last_name = (strpos($name, ' ') === false) ? '' : preg_replace('#.*\s([\w-]*)$#', '$1', $name);
+        $first_name = trim( preg_replace('#'.$last_name.'#', '', $name ) );
+        return array($first_name, $last_name);
     }
 }
