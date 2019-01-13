@@ -25,6 +25,10 @@ return [
          * You can set it to any string you want and you can add
          * as many lists as you want.
          */
+        'general' => [
+            'id' => 'e13fbf6c76'
+        ],
+
         'free-intro-course' => [
 
             /*

@@ -23,6 +23,7 @@
 						<div class="col-lg-4 col-md-6 col-sm-8 col-12 form-group">
 							<h6>Category:</h6>
 							<select name="category" form="create_content_form" class="form-control">
+								<option value="Art">Art</option>
 								<option value="Beauty">Beauty</option>
 								<option value="Business">Business</option>
 								<option value="Cars">Cars</option>
@@ -32,12 +33,14 @@
 								<option value="Fitness">Fitness</option>
 								<option value="Food">Food</option>
 								<option value="Funny">Funny</option>
+								<option value="Gaming">Gaming</option>
 								<option value="Health">Health</option>
 								<option value="Homes">Homes</option>
 								<option value="Makeup">Makeup</option>
 								<option value="Motivation">Motivation</option>
 								<option value="Music">Music</option>
 								<option value="Quotes">Quotes</option>
+								<option value="Sports">Sports</option>
 								<option value="Trading">Trading</option>
 								<option value="Travel">Travel</option>
 								<option value="Trucks">Trucks</option>

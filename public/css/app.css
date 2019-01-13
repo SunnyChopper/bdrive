@@ -322,6 +322,30 @@
 	line-height: 2em;
 }
 
+#post-body > ol {
+	color: black;
+	font-size: 16px;
+	line-height: 2em;
+}
+
+#post-body > ul {
+	color: black;
+	font-size: 16px;
+	line-height: 2em;
+}
+
+#post-body > ol > li {
+	color: black;
+	font-size: 16px;
+	line-height: 2em;
+}
+
+#post-body > ul > li {
+	color: black;
+	font-size: 16px;
+	line-height: 2em;
+}
+
 .color-box-blue .color-box-content .content-wrapper .content > h5 {
 	color: white;
 }

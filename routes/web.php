@@ -35,6 +35,9 @@ Route::get('/admin/posts/view', 'AdminController@view_blog_posts');
 Route::get('/admin/posts/new', 'AdminController@new_blog_post');
 Route::get('/admin/posts/edit/{post_id}', 'AdminController@edit_blog_post');
 
+// Newsletter functions
+Route::post('/newsletter/submit', 'NewsletterController@subscribe_user');
+
 // Lead magnet functions
 Route::get('/admin/lead-magnets/view', 'LeadMagnetsController@view_lead_magnets');
 Route::get('/admin/lead-magnets/new', 'LeadMagnetsController@new_lead_magnet');
