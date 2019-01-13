@@ -19,6 +19,7 @@ Route::get('/courses', 'PagesController@courses');
 Route::get('/free-course', 'PagesController@free_course');
 Route::get('/blog', 'PagesController@blog');
 Route::get('/post/{post_id}/{slug}', 'PagesController@view_post');
+Route::get('/test', 'PagesController@test');
 
 // Members site
 Route::get('/members/profile/{user_id}', 'MembersController@profile');

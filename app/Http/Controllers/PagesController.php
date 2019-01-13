@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Custom\BlogPostHelper;
+use App\User;
+
+use App\Notifications\NewUser;
 
 use Mail;
 
@@ -31,7 +34,7 @@ class PagesController extends Controller
 
         $data = array('name' => $data->name, 'email' => $data->email, 'category' => $data->category, 'body' => $data->message);
 
-        Mail::send('emails.contact-email', $data, function($message) use ($to_name, $to_email){
+        Mail::send('emails.contact-email', $data, function($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name);
             $message->from(env('MAIL_USERNAME'), "BillionairesDrive");
             $message->subject('🚨 New Contact Form Submission 🚨');

@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Events\Registered;
+
+use App\Notifications\NewUser;
+
 use Carbon;
 
 class RegisterController extends Controller
@@ -32,6 +38,12 @@ class RegisterController extends Controller
      */
     protected $redirectTo = '/members/dashboard';
 
+    public function showRegistrationForm()
+    {
+        $page_header = "Join the Community";
+        return view('auth.register')->with('page_header', $page_header);
+    }
+
     /**
      * Create a new controller instance.
      *
@@ -40,6 +52,20 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        $this->guard()->login($user);
+
+        $user->notify(new NewUser());
+
+        return $this->registered($request, $user)
+                        ?: redirect($this->redirectPath());
     }
 
     /**
