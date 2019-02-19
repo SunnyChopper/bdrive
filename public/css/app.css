@@ -103,6 +103,10 @@
 	Custom Divs
 \* -------------------------- */
 
+#ouibounce-modal {
+	z-index: 999;
+}
+
 .content-bank-background-card {
 	width: 100%;
 	padding-top: 100%;
