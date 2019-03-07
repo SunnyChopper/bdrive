@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Course;
 use App\CourseModule;
+use App\CourseEnrollment;
 
 class CoursesController extends Controller
 {
@@ -108,6 +109,68 @@ class CoursesController extends Controller
     	$module->save();
 
     	return redirect(url('/admin/courses/modules/'));
+    }
+
+    public function create_course_enrollment(Request $data) {
+        $enrollment = new CourseEnrollment;
+        $enrollment->course_id = $data->course_id;
+        $enrollment->user_id = $data->user_id;
+
+        if (isset($data->customer_id)) {
+            $enrollment->customer_id = $data->customer_id;
+        }
+        
+        if (isset($data->subscription_id)) {
+            $enrollment->subscription_id = $data->subscription_id;
+        }
+        
+        $enrollment->purchase_date = $data->purchase_date;
+        $enrollment->revenue = $data->revenue;
+        $enrollment->recurring = $data->recurring;
+
+        if (isset($data->next_payment_date)) {
+            $enrollment->next_payment_date = $data->next_payment_date;
+        }
+
+        if (isset($data->status)) {
+            $enrollment->status = $data->status;
+        }
+
+        $enrollment->save();
+
+        return redirect(url($data->redirect_url));
+    }
+
+    public function read_course_enrollments($user_id) {
+        $enrollments = CourseEnrollment::where('user_id', $user_id)->get();
+        $page_title = "Course Enrollments";
+        $page_header = $page_title;
+
+        return view('members.course-enrollments')->with('page_title', $page_title)->with('page_header', $page_header)->with('enrollments', $enrollments);
+    }
+
+    public function update_course_enrollment(Request $data) {
+        $enrollment = CourseEnrollment::find($data->enrollment_id);
+
+        if (isset($data->next_payment_date)) {
+            $enrollment->next_payment_date = $data->next_payment_date;
+        }
+        
+        if (isset($data->status)) {
+            $enrollment->status = $data->status;
+        }
+        
+        $enrollment->save();
+
+        return redirect(url($data->redirect_url));
+    }
+
+    public function delete_course_enrollment(Request $data) {
+        $enrollment = CourseEnrollment::find($data->enrollment_id);
+        $enrollment->status = 0;
+        $enrollment->save();
+
+        return redirect(url($data->redirect_url));
     }
 
     private function get_modules_for_course($course_id) {

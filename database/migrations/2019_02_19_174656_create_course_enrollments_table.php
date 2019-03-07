@@ -17,7 +17,7 @@ class CreateCourseEnrollmentsTable extends Migration
             $table->increments('id');
             $table->integer('course_id');
             $table->integer('user_id');
-            $table->string('customer_id', 128);
+            $table->string('customer_id', 128)->nullable();
             $table->string('subscription_id', 128)->nullable();
             $table->timestamp('purchase_date');
             $table->double('revenue');
