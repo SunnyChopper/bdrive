@@ -19,6 +19,7 @@ class CreateCoursesTable extends Migration
             $table->text('description');
             $table->string('preview_video', 256);
             $table->integer('enrolled')->default(0);
+            $table->double('amount')->default(0);
             $table->integer('is_active')->default(1);
             $table->timestamps();
         });

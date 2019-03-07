@@ -7,7 +7,7 @@
 		<div class="row">
 			<div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-12 col-xs-12">
 				<div class="gray-box">
-					<h3 class="text-center">Create a New Lead Magnet</h3>
+					<h3 class="text-center">Edit Lead Magnet</h3>
 					<p class="text-center">Fields with <span class="red">*</span> are required.</p>
 					<hr />
 					<form action="/admin/lead-magnets/update" method="post" id="edit_lead_magnet_form">

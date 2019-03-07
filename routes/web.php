@@ -78,3 +78,8 @@ Route::get('/members/content-bank/edit/{post_id}', 'ContentBankController@edit')
 Route::post('/members/content-bank/update', 'ContentBankController@update');
 Route::post('/members/content-bank/delete', 'ContentBankController@delete');
 Route::get('/members/content-bank/download/{post_id}', 'ContentBankController@download');
+
+// Course functions
+Route::get('/admin/courses', 'CoursesController@view_all');
+Route::get('/admin/courses/new', 'CoursesController@new_course');
+Route::get('/admin/courses/edit/{course_id}', 'CoursesController@edit_course');
