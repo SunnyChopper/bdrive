@@ -83,3 +83,6 @@ Route::get('/members/content-bank/download/{post_id}', 'ContentBankController@do
 Route::get('/admin/courses', 'CoursesController@view_all');
 Route::get('/admin/courses/new', 'CoursesController@new_course');
 Route::get('/admin/courses/edit/{course_id}', 'CoursesController@edit_course');
+Route::get('/members/courses', 'CoursesController@view_courses');
+Route::get('/members/courses/{course_id}/dashboard', 'CoursesController@view_course_dashboard');
+Route::get('/members/courses/{course_id}/watch/{video_id}', 'CoursesController@view_course_video');

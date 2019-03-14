@@ -4,12 +4,44 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Custom\CourseHelper;
+
 use App\Course;
 use App\CourseModule;
 use App\CourseEnrollment;
+use App\CourseVideo;
 
 class CoursesController extends Controller
 {
+
+    public function view_courses() {
+        $page_title = "Your Courses";
+        $page_header = $page_title;
+
+        // Get courses
+        $courses = CourseHelper::getAllCourses();
+
+        return view('members.courses.view-all')->with('page_title', $page_title)->with('page_header', $page_header)->with('courses', $courses);
+    }
+
+    public function view_course_dashboard($course_id) {
+        $course = Course::find($course_id);
+        $page_title = $course->title;
+        $page_header = $page_title;
+
+        $course_modules = CourseModule::where('course_id', $course->id)->get();
+
+        return view('members.courses.dashboard')->with('course', $course)->with('page_title', $page_title)->with('page_header', $page_header)->with('course_modules', $course_modules);
+    }
+
+    public function view_course_video($course_id, $video_id) {
+        $course_video = CourseVideo::find($video_id);
+        $page_title = $course_video->title;
+        $page_header = $page_title;
+
+        return view('members.courses.view-video')->with('course_video', $course_video)->with('page_title', $page_title)->with('page_header', $page_header);
+    }
+
     public function view_all() {
     	$page_title = "Courses";
     	$page_header = "Courses";
@@ -176,6 +208,45 @@ class CoursesController extends Controller
     private function get_modules_for_course($course_id) {
     	$modules = CourseModule::where('course_id', $course_id)->get();
     	return $modules;
+    }
+
+    public function create_course_video(Request $data) {
+        $course_video = new CourseVideo;
+        $course_video->title = $data->title;
+        $course_video->description = $data->description
+        $course_video->video_id = $data->video_id;
+        $course_video->module_id = $data->module_id;
+        $course_video->save();
+
+        return redirect(url($data->redirect_url));
+    }
+
+    public function read_course_video($id) {
+        $course_video = CourseVideo::find($id);
+
+        $page_title = $course_video->title;
+        $page_header = $page_title;
+
+        return view('members.courses.view-video')->with('course_video', $course_video)->with('page_title', $page_title)->with('page_header', $page_header);
+    }
+
+    public function update_course_video(Request $data) {
+        $course_video = CourseVideo::find($data->course_video_id);
+        $course_video->title = $data->title;
+        $course_video->description = $data->description;
+        $course_video->video_id = $data->video_id;
+        $course_video->module_id = $data->module_id;
+        $course_video->save();
+
+        return redirect(url($data->redirect_url));
+    }
+
+    public function delete_course_video(Request $data) {
+        $course_video = CourseVideo::find($data->course_video_id);
+        $course_video->is_active = 0;
+        $course_video->save();
+
+        return redirect(url($data->redirect_url));
     }
 
 }
