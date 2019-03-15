@@ -39,11 +39,12 @@
 										<td style="vertical-align: middle;">${{ $course->amount }}</td>
 										<td style="vertical-align: middle;">{{ $course->created_at->format('M jS, Y') }}</td>
 										<td style="vertical-align: middle;">
-											<a href="/admin/courses/edit/{{ $course->id }}" class="btn btn-info rounded small">Edit</a>
+											<a href="/admin/courses/edit/{{ $course->id }}" class="btn btn-info rounded small">Edit Course</a>
+											<a href="/admin/courses/modules/{{ $course->id }}/edit" class="btn btn-warning rounded small">Edit Modules</a>
 											<button id="{{ $course->id}}" class="btn delete_course_button btn-danger rounded small">Delete</button>
 										</td>
 									</tr>
-								@endforeach	
+								@endforeach
 							</tbody>
 						</table>
 					</div>

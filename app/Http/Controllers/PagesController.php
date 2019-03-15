@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Custom\BlogPostHelper;
-use App\User;
+use App\Custom\CourseHelper;
 
 use App\Notifications\NewUser;
+
+use App\User;
+use App\Course;
 
 use Mail;
 
@@ -72,7 +75,18 @@ class PagesController extends Controller
         $page_header = "Courses";
         $page_title = $page_header;
 
-        return view('pages.courses')->with('page_header', $page_header)->with('page_title', $page_title);
+        // Get courses
+        $courses = CourseHelper::getAllCourses();
+
+        return view('pages.courses')->with('page_header', $page_header)->with('page_title', $page_title)->with('courses', $courses);
+    }
+
+    public function view_course($course_id) {
+        // Get course
+        $course = Course::find($course_id);
+        $page_title = $course->title;
+        $page_header = $page_title;
+        return view('pages.view-course')->with('page_header', $page_header)->with('page_title', $page_title)->with('course', $course);
     }
 
     public function free_course() {

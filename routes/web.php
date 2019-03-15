@@ -16,6 +16,7 @@ Route::get('/', 'PagesController@index');
 Route::get('/contact', 'PagesController@contact');
 Route::post('/contact/submit', 'PagesController@submit_contact');
 Route::get('/courses', 'PagesController@courses');
+Route::get('/courses/{course_id}', 'PagesController@view_course');
 Route::get('/free-course', 'PagesController@free_course');
 Route::get('/blog', 'PagesController@blog');
 Route::get('/post/{post_id}/{slug}', 'PagesController@view_post');
@@ -83,6 +84,8 @@ Route::get('/members/content-bank/download/{post_id}', 'ContentBankController@do
 Route::get('/admin/courses', 'CoursesController@view_all');
 Route::get('/admin/courses/new', 'CoursesController@new_course');
 Route::get('/admin/courses/edit/{course_id}', 'CoursesController@edit_course');
+Route::get('/admin/courses/modules/{course_id}/edit', 'CoursesController@edit_course_modules');
+
 Route::get('/members/courses', 'CoursesController@view_courses');
 Route::get('/members/courses/{course_id}/dashboard', 'CoursesController@view_course_dashboard');
 Route::get('/members/courses/{course_id}/watch/{video_id}', 'CoursesController@view_course_video');

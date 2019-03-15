@@ -53,6 +53,7 @@
 						</li>
 					@else
 						<li><a href="/members/dashboard" class="animsition-link">Dashboard</a></li>
+						<li><a href="/members/courses" class="animsition-link">Courses</a></li>
 						<li><a href="/members/content-bank/view" class="animsition-link">Content Bank</a>
 							<ul>
 								<li><a href="/members/content-bank/new">Upload Content</a></li>
