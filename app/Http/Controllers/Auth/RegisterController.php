@@ -15,6 +15,7 @@ use Illuminate\Auth\Events\Registered;
 use App\Notifications\NewUser;
 
 use Carbon;
+use Newsletter;
 
 class RegisterController extends Controller
 {
@@ -93,6 +94,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        Newsletter::subscribe('rincewind@discworld.com', ['FNAME' => $data['first_name'], 'LNAME' => $data['last_name']]);
         return User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],

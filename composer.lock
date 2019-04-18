@@ -2229,22 +2229,22 @@
         },
         {
             "name": "spatie/laravel-newsletter",
-            "version": "4.2.2",
+            "version": "4.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-newsletter.git",
-                "reference": "6d5bad1984bb0e1032f8070742de60699ba832b0"
+                "reference": "b6f6b6f7fdac3916e8d6ed3c15ca7ea7b6f2131a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-newsletter/zipball/6d5bad1984bb0e1032f8070742de60699ba832b0",
-                "reference": "6d5bad1984bb0e1032f8070742de60699ba832b0",
+                "url": "https://api.github.com/repos/spatie/laravel-newsletter/zipball/b6f6b6f7fdac3916e8d6ed3c15ca7ea7b6f2131a",
+                "reference": "b6f6b6f7fdac3916e8d6ed3c15ca7ea7b6f2131a",
                 "shasum": ""
             },
             "require": {
                 "drewm/mailchimp-api": "^2.4",
-                "illuminate/support": "~5.5.0|~5.6.0|~5.7.0",
-                "php": "~7.0"
+                "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0",
+                "php": "~7.1"
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
@@ -2285,7 +2285,7 @@
                 "mailchimp",
                 "newsletter"
             ],
-            "time": "2018-09-04T08:21:51+00:00"
+            "time": "2019-02-27T16:21:30+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
