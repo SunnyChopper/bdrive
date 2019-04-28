@@ -33,13 +33,19 @@
 						<div class="form-group mb-64">
 							<h5>Image URL:</h5>
 							<p class="mb-2">Enter the URL for the image that goes with this lead magnet. It will be used on Open Graph as well.</p>
-							<input type="text" name="image_url" class="form-control" required>
+							<input type="text" name="image_url" class="form-control">
 						</div>
 
 						<div class="form-group mb-64">
 							<h5>YouTube Video URL:</h5>
 							<p class="mb-2">If there's a video that goes with this lead magnet, put the URL of the YouTube video here.</p>
-							<input type="text" name="youtube_video_url" class="form-control" required>
+							<input type="text" name="youtube_video_url" class="form-control">
+						</div>
+
+						<div class="form-group mb-64">
+							<h5>MailChimp Newsletter ID<span class="red">*</span>:</h5>
+							<p class="mb-2">The ID for the Mailchimp newsletter. Configured in config/newsletter.php.</p>
+							<input type="text" name="newsletter_id" class="form-control" required>
 						</div>
 
 						<div class="form-group mb-64">

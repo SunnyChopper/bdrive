@@ -18,7 +18,8 @@ class LeadMagnetsController extends Controller
     		"description" => $data->description,
     		"slug" => $data->slug,
             "image_url" => $data->image_url,
-            "youtube_video_url" => $data->youtube_video_url
+            "youtube_video_url" => $data->youtube_video_url,
+            "newsletter_id" => $data->newsletter_id
     	);
     	$lead_magnet_helper = new LeadMagnetHelper();
     	$lead_magnet_id = $lead_magnet_helper->create($lead_magnet_data);

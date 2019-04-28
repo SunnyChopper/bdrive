@@ -16,6 +16,7 @@
 								<th>Title</th>
 								<th>Subtitle</th>
 								<th>Slug</th>
+								<th>Newsletter ID</th>
 								<th>Created</th>
 								<th></th>
 							</tr>
@@ -26,6 +27,7 @@
 									<td style="vertical-align: middle;">{{ $lead_magnet->title }}</td>
 									<td style="vertical-align: middle;">{{ $lead_magnet->subtitle }}</td>
 									<td style="vertical-align: middle;">{{ $lead_magnet->slug }}</td>
+									<td style="vertical-align: middle;">{{ $lead_magnet->newsletter_id }}</td>
 									<td style="vertical-align: middle;">{{ $lead_magnet->created_at->format('M jS, Y') }}</td>
 									<td style="vertical-align: middle;">
 										<a href="/admin/lead-magnets/edit/{{ $lead_magnet->id }}" class="btn btn-info rounded small">Edit</a>

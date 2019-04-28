@@ -23,6 +23,7 @@ class LeadMagnetHelper {
 		$lead_magnet->slug = $data["slug"];
 		$lead_magnet->image_url = $data["image_url"];
 		$lead_magnet->youtube_video_url = $data["youtube_video_url"];
+		$lead_magnet->newsletter_id = $data["newsletter_id"];
 		$lead_magnet->save();
 
 		return $lead_magnet->id;
