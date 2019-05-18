@@ -14,7 +14,7 @@
 				<ul class="sf-menu templateux-menu d-none d-md-block">
 					@if(Auth::guest())
 						<li><a href="/" class="animsition-link">Home</a></li>
-						<li><a href="/courses" class="animsition-link">Courses</a></li>
+						<li><a href="/public-courses" class="animsition-link">Public Courses</a></li>
 						{{-- <li><a href="/tools" class="animsition-link">Tools</a></li> --}}
 						{{-- <li><a href="/services" class="animsition-link">Services</a></li> --}}
 						<li><a href="/blog">Advice & Tips</a></li>
@@ -54,7 +54,7 @@
 						</li>
 					@else
 						<li><a href="/members/dashboard" class="animsition-link">Dashboard</a></li>
-						<li><a href="/members/courses" class="animsition-link">Courses</a></li>
+						<li><a href="/public-courses" class="animsition-link">Public Courses</a></li>
 						<li><a href="/members/content-bank/view" class="animsition-link">Content Bank</a>
 							<ul>
 								<li><a href="/members/content-bank/new">Upload Content</a></li>

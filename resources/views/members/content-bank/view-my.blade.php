@@ -34,7 +34,7 @@
 				<div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-12 col-12">
 					<div class="gray-box">
 						<p class="text-center">You have not uploaded any content yet.</p>
-						<a href="/members/content-bank/new" class="center-button btn btn-primary">Upload Content</a>
+						<a href="/members/content-bank/new" class="btn btn-primary centered">Upload Content</a>
 					</div>
 				</div>
 			@endif

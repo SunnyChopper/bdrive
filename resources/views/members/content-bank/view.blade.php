@@ -8,8 +8,8 @@
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<h2 class="text-center">Get content. Share content.</h2>
 				<p class="text-center mb-2">Keep your feed fresh with content from others. Share your content to get brand awareness.</p>
-				<div class="center-button">
-					<a href="/members/content-bank/new" class="btn btn-primary mb-32" style="display: inline-block;">Upload Content</a>
+				<div class="centered">
+					<a href="/members/content-bank/new" class="btn btn-primary mb-32 center-button" style="display: inline-block;">Upload Content</a>
 					<a href="/members/content-bank/my" class="btn btn-warning mb-32" style="display: inline-block;">My Content</a>
 				</div>
 				<hr />
@@ -35,7 +35,7 @@
 				<div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-12 col-12">
 					<div class="gray-box">
 						<p class="text-center">You're early to the party. No content has been uploaded yet. Be the first one.</p>
-						<a href="/members/content-bank/new" class="center-button btn btn-primary">Upload Content</a>
+						<a href="/members/content-bank/new" class="centered btn btn-primary">Upload Content</a>
 					</div>
 				</div>
 			@endif

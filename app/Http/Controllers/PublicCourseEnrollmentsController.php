@@ -17,7 +17,7 @@ class PublicCourseEnrollmentsController extends Controller
         $enrollment->save();
 
         $user = User::find(Auth::id());
-        Newsletter::subscribe($user->email, ['FNAME' => $user->first_name, 'LNAME' => $user->last_name], 'tech-101');
+        // Newsletter::subscribe($user->email, ['FNAME' => $user->first_name, 'LNAME' => $user->last_name], 'tech-101');
 
         return redirect(url('/members/public-courses/view/' . $public_course_id));
     }

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use Illuminate\Support\Facades\Session;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
@@ -37,10 +39,23 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/members/dashboard';
+    protected function redirectTo() {
+        $url = Session::get('login_redirect');
+        Session::forget('login_redirect');
+        Session::save();
+        return $url;
+    }
 
     public function showRegistrationForm()
     {
+        if (isset($_GET['redirect_action'])) {
+            Session::put('login_redirect', $_GET['redirect_action']);
+            Session::save();
+        } else {
+            Session::put('login_redirect', '/members/dashboard');
+            Session::save();
+        }
+
         $page_header = "Join the Community";
         return view('auth.register')->with('page_header', $page_header);
     }

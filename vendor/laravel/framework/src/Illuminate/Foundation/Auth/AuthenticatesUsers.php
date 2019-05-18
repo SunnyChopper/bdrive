@@ -4,6 +4,7 @@ namespace Illuminate\Foundation\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\ValidationException;
 
 trait AuthenticatesUsers
@@ -31,7 +32,7 @@ trait AuthenticatesUsers
             Session::put('login_redirect', '/members/dashboard');
             Session::save();
         }
-        
+
         $page_header = "Login";
         return view('auth.login')->with('page_header', $page_header);
     }
