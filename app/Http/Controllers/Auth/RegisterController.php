@@ -63,7 +63,7 @@ class RegisterController extends Controller
 
         $this->guard()->login($user);
 
-        $user->notify(new NewUser());
+        // $user->notify(new NewUser());
 
         return $this->registered($request, $user)
                         ?: redirect($this->redirectPath());
@@ -94,7 +94,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        Newsletter::subscribe('rincewind@discworld.com', ['FNAME' => $data['first_name'], 'LNAME' => $data['last_name']]);
+        // Newsletter::subscribe($data['emaiil'], ['FNAME' => $data['first_name'], 'LNAME' => $data['last_name']]);
         return User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],

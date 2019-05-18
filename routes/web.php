@@ -89,3 +89,28 @@ Route::get('/admin/courses/modules/{course_id}/edit', 'CoursesController@edit_co
 Route::get('/members/courses', 'CoursesController@view_courses');
 Route::get('/members/courses/{course_id}/dashboard', 'CoursesController@view_course_dashboard');
 Route::get('/members/courses/{course_id}/watch/{video_id}', 'CoursesController@view_course_video');
+
+// Public courses functions
+Route::get('/admin/public-courses/view', 'PublicCoursesController@view_all');
+Route::get('/admin/public-courses/new', 'PublicCoursesController@new');
+Route::post('/admin/public-courses/create', 'PublicCoursesController@create');
+Route::get('/admin/public-courses/edit/{public_course_id}', 'PublicCoursesController@edit');
+Route::post('/admin/public-courses/update', 'PublicCoursesController@update');
+Route::post('/admin/public-courses/delete', 'PublicCoursesController@delete');
+Route::get('/admin/public-courses/{public_course_id}/videos/view', 'PublicCourseVideosController@view_all');
+Route::get('/admin/public-courses/{public_course_id}/videos/new', 'PublicCourseVideosController@new');
+Route::post('/admin/public-courses/videos/create', 'PublicCourseVideosController@create');
+Route::get('/admin/public-courses/{public_course_id}/videos/edit/{video_id}', 'PublicCourseVideosController@edit');
+Route::post('/admin/public-courses/videos/update', 'PublicCourseVideosController@update');
+Route::post('/admin/public-courses/videos/delete', 'PublicCourseVideosController@delete');
+Route::get('/public-courses', 'PublicCoursesController@view_courses');
+Route::get('/public-courses/{public_course_id}', 'PublicCoursesController@read');
+Route::get('/public-courses/enroll/{public_course_id}', 'PublicCourseEnrollmentsController@create');
+Route::get('/members/public-courses/view/{public_course_id}', 'PublicCoursesController@course_dashboard');
+Route::get('/members/public-courses/video/{video_id}', 'PublicCourseVideosController@read');
+Route::post('/members/public-courses/comment/create', 'PublicCourseVideoCommentsController@create');
+Route::get('/members/public-courses/{public_course_id}/videos', 'PublicCoursesController@course_videos');
+Route::get('/members/public-courses/{public_course_id}/forums/new', 'PublicCoursesController@new_forum');
+Route::post('/members/public-courses/forums/create', 'PublicCourseForumsController@create');
+Route::get('/members/public-courses/{public_course_id}/forums/{forum_id}', 'PublicCoursesController@view_forum');
+Route::post('/members/public-courses/forums/comment/create', 'PublicCourseForumCommentsController@create');

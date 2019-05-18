@@ -18,8 +18,15 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('/members/dashboard');
+            if(isset($_GET['redirect_action'])) {
+                return redirect(url($_GET['redirect_action']));
+            } else {
+                return redirect(url('/members/dashboard'));
+            }
+            
         }
+
+        return $next($request);
 
         return $next($request);
     }

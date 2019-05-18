@@ -13,13 +13,13 @@
 
 		<div class="row">
 			<div class="col-lg-3 col-md-4 col-sm-6 col-6">
-				<a href="/courses">
+				<a href="/public-courses">
 					<div class="color-box color-box-blue">
 						<div class="color-box-content">
 							<div class="content-wrapper">
 								<div class="content">
 									<span class="icon icon-book"></span>
-									<h5 class="text-center">View Courses</h5>
+									<h5 class="text-center">View Public Courses</h5>
 								</div>
 							</div>
 						</div>
