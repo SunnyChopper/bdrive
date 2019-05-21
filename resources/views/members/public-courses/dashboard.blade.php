@@ -5,7 +5,7 @@
 
 	<div class="container pt-64 pb-64">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-12">
 				<h4>Latest Videos</h4>
 				<hr />
 				<ul class="list-group">
@@ -24,7 +24,7 @@
 				@endif
 			</div>
 
-			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-32-mobile">
 				<div class="gray-box">
 					<h4>Latest Forums</h4>
 					@if(count($forums) > 0)
