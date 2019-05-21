@@ -36,6 +36,7 @@ Route::get('/admin/dashboard', 'AdminController@dashboard');
 Route::get('/admin/posts/view', 'AdminController@view_blog_posts');
 Route::get('/admin/posts/new', 'AdminController@new_blog_post');
 Route::get('/admin/posts/edit/{post_id}', 'AdminController@edit_blog_post');
+Route::get('/admin/logout', 'AdminController@logout');
 
 // Newsletter functions
 Route::post('/newsletter/submit', 'NewsletterController@subscribe_user');

@@ -109,6 +109,15 @@ class AdminController extends Controller
         return view('admin.posts.edit')->with('page_header', $page_header)->with('post', $post);
     }
 
+    public function logout() {
+        Session::forget('admin_login');
+        Session::forget('admin_switch');
+        Session::forget('backend_auth');
+        Session::save();
+
+        return redirect(url('/'));
+    }
+
     /* Private functions */
     private function protect() {
         // Check to see if already logged in

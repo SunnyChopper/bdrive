@@ -52,6 +52,7 @@
 								<li><a href="/admin/lead-magnets/new">New Lead Magnet</a></li>
 							</ul>
 						</li>
+						<li><a href="/admin/logout">Logout</a></li>
 					@else
 						<li><a href="/members/dashboard" class="animsition-link">Dashboard</a></li>
 						<li><a href="/public-courses" class="animsition-link">Public Courses</a></li>
