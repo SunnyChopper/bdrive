@@ -22,6 +22,7 @@
 					<p class="mb-0"><strong>Your response:</strong> {{ $comment->comment }}</p>
 					@else
 					<p>Answer the question above and receive 5 points.</p>
+					<p><strong>Your Points: </strong> {{ \App\Custom\UsersHelper::getPoints(Auth::id()) }}</p>
 					<form id="create_comment_form" action="/members/public-courses/comment/create" method="POST">
 						<input type="hidden" value="{{ $video->course_id }}" name="public_course_id">
 						<input type="hidden" value="{{ $video->id }}" name="public_video_id">
