@@ -16,6 +16,7 @@
 							<ul class="list-unstyled">
 								<li><a href="/blog">Advice & Tips</a></li>
 								<li><a href="/free-course">Free Intro Course</a></li>
+								<li><a href="/public-courses">Public Courses</a></li>
 								{{-- <li><a href="#">Book List</a></li>
 								<li><a href="#">Extra Resources</a></li> --}}
 							</ul>

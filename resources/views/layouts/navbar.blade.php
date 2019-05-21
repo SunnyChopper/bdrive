@@ -62,7 +62,7 @@
 								<li><a href="/members/content-bank/my">My Content</a></li>
 							</ul>
 						</li>
-						<li><a href="/members/profile/{{ Auth::id() }}" class="animsition-link">{{ Auth::user()->first_name }}</a>
+						<li><a href="/members/profile/{{ Auth::id() }}" class="animsition-link">{{ Auth::user()->first_name }} <span class="badge badge-primary" style="padding: 4px;">{{ \App\Custom\UsersHelper::getPoints(Auth::id()) }}</span></a>
 							<ul>
 								<li><a href="/members/logout">Logout</a></li>
 							</ul>
