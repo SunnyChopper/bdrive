@@ -45,8 +45,8 @@ class NicheExplorerController extends Controller
 
     public function update_niche(Request $data) {
     	$niche = Niche::find($data->niche_id);
-    	$niche->string('title', 128);
-    	$niche->text('description');
+    	$niche->title = $data->title;
+        $niche->description = $data->description;
     	$niche->save();
 
     	return redirect(url('/admin/niches'));

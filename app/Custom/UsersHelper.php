@@ -25,6 +25,10 @@ class UsersHelper {
 		return User::find($user_id);
 	}
 
+	public static function getUsername($user_id) {
+		return User::find($user_id)->username;
+	}
+
 	public static function logoutAdmin() {
 		Auth::logout();
 		Session::forget('admin_login');
